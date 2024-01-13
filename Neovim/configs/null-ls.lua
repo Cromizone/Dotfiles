@@ -8,10 +8,7 @@ local sources = {
     extra_args = {"-l", "100"},
   }),
 
-   lint.mypy.with({
-      extra_args = {"--ignore-missing-imports", "--python-executable", "/usr/bin/python"},
-      method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
-  }),
+  lint.ruff
 }
 
 null_ls.setup {
