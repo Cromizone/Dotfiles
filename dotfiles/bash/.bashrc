@@ -91,6 +91,19 @@ alias spo="cd $HOME/environment/programming/scratch/"
 
 ######################################
 #                                    #
+#           Github Aliases           #
+#                                    #
+######################################
+alias g="git"
+alias gl="git log"
+alias gi="git init"
+alias ga="git add"
+alias gaa="git add ."
+alias gs="git status"
+alias gc="git commit -m"
+
+######################################
+#                                    #
 #          Useful Functions          #
 #                                    #
 ######################################
