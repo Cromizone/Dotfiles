@@ -63,6 +63,7 @@ alias cls='clear'
 alias rm='trash'
 alias py='python3 -qB'
 alias mkdir='mkdir -p'
+alias less="less -R -I -K --proc-tab"
 alias ls='ls -ah --group-directories-first --color=always'
 
 ######################################
@@ -135,7 +136,9 @@ extract() {
 
 # only enable starship if the current session is not in a tty
 if [[ $(tty | grep ".*/pts/.*") ]]; then
-  eval "$(starship init bash)"
+  if [[ $(command -v starship) ]]; then
+    eval "$(starship init bash)"
+  fi
 
 else
   # if the current session is in a tty then apply the catppuccin theme
